@@ -108,8 +108,8 @@
         async function predict() {
             var dic_class2information = {};
             dic_class2information['red apple'] = '알칼리성 식품으로 칼로리가 적고 몸에 좋은 성분이 많은 사과';
-            dic_class2information['tomato'] = '뇌졸중과 암을 예방해주는 비타민과 무기질의 공급원인 토마토';
-            dic_class2information['strawberry'] = '비타민C 다량 함류로 피부미용과 피로회복에 좋은 딸기';
+            dic_class2information['one tomato'] = '뇌졸중과 암을 예방해주는 비타민과 무기질의 공급원인 토마토';
+            dic_class2information['one strawberry'] = '비타민C 다량 함류로 피부미용과 피로회복에 좋은 딸기';
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
